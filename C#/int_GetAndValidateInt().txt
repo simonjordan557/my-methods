@@ -1,0 +1,28 @@
+ public int GetAndValidateInt()
+	
+{
+
+	bool validInt;
+	int validatedInt;
+
+
+         while (true)
+            {
+                Console.WriteLine("\nEnter your number:");
+
+                string input = Console.ReadLine();
+
+                validInt = int.TryParse(input, out validatedInt);
+
+                if (!validInt)
+                {
+                    Console.WriteLine($"\n{input} is not a valid response.");
+                }
+
+		else
+		{
+			return validatedInt;
+            	}
+
+	    }
+}

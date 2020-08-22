@@ -1,0 +1,19 @@
+public int[] BuildArrayFromUserInput()
+{
+	    Console.WriteLine("\nHow many numbers in your array?");
+
+            int arrayLength = evaluator.GetAndValidateInt();
+
+            List<int> arrayList = new List<int>();
+
+            Console.WriteLine("\nEnter your array elements, one at a time.\n");
+
+            for (int i = 0; i < arrayLength; i++)
+            {
+                arrayList.Add(evaluator.GetAndValidateInt());
+            }
+
+            int[] numbers = arrayList.ToArray();
+
+	    return numbers;
+}

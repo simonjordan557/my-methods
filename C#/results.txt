@@ -1,0 +1,141 @@
+
+
+L:\Backup 19.1.18\Gamedev\My Methods\C#\bool_ValidateStringIsLetters(string).txt
+
+private bool ValidateStringIsLetters(string testLetters)
+        {
+            for (int i = 0; i < testLetters.Length; i++)
+            {
+                char testChar = testLetters[i];
+                if (!(Char.IsLetter(testChar)))
+                {
+                    Console.WriteLine($"{testChar} is not valid. A to Z only.");
+                    return false;
+                }
+            }
+
+            return true;
+           
+        }
+
+
+
+
+
+L:\Backup 19.1.18\Gamedev\My Methods\C#\int[]_BuildArrayFromUserInput().txt
+
+public int[] BuildArrayFromUserInput()
+{
+	    Console.WriteLine("\nHow many numbers in your array?");
+
+            int arrayLength = evaluator.GetAndValidateInt();
+
+            List<int> arrayList = new List<int>();
+
+            Console.WriteLine("\nEnter your array elements, one at a time.\n");
+
+            for (int i = 0; i < arrayLength; i++)
+            {
+                arrayList.Add(evaluator.GetAndValidateInt());
+            }
+
+            int[] numbers = arrayList.ToArray();
+
+	    return numbers;
+}
+
+
+
+
+
+L:\Backup 19.1.18\Gamedev\My Methods\C#\int_GetAndValidateInt().txt
+
+ public int GetAndValidateInt()
+	
+{
+
+	bool validInt;
+	int validatedInt;
+
+
+         while (true)
+            {
+                Console.WriteLine("\nEnter your number:");
+
+                string input = Console.ReadLine();
+
+                validInt = int.TryParse(input, out validatedInt);
+
+                if (!validInt)
+                {
+                    Console.WriteLine($"\n{input} is not a valid response.");
+                }
+
+		else
+		{
+			return validatedInt;
+            	}
+
+	    }
+}
+
+
+
+
+
+L:\Backup 19.1.18\Gamedev\My Methods\C#\string_GetAndValidateYOrN().txt
+
+ public string GetAndValidateYOrN()
+
+{
+
+	string input;
+
+            while ((input != "N") && (input != "Y"))
+            {
+                Console.WriteLine("\nIs it the weekend? Y or N");
+
+                input = Console.ReadLine().ToUpper();
+
+                if (input == "Y" || input == "N")
+                {
+                    return input;
+                }
+
+                else
+                {
+                    Console.WriteLine($"\n{input} is not a valid response.");
+                }
+            }
+}
+
+
+
+
+
+L:\Backup 19.1.18\Gamedev\My Methods\C#\string_IntArrayToString(int[]).txt
+
+// SEPARATES EACH DIGIT WITH A COMMA EXCEPT THE LAST DIGIT.
+
+ public string IntArrayToString(int[] inputArray)
+        {
+            string returnString = "";
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                returnString += inputArray[i].ToString();
+
+                if (i != inputArray.Length - 1)
+                {
+                    returnString += ", ";
+                }
+            }
+
+            return returnString;
+        }
+
+
+
+
+
+**** FILE COMPLETE. THANKS FOR CONCATENATING! ****

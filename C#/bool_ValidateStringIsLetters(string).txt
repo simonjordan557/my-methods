@@ -1,0 +1,15 @@
+private bool ValidateStringIsLetters(string testLetters)
+        {
+            for (int i = 0; i < testLetters.Length; i++)
+            {
+                char testChar = testLetters[i];
+                if (!(Char.IsLetter(testChar)))
+                {
+                    Console.WriteLine($"{testChar} is not valid. A to Z only.");
+                    return false;
+                }
+            }
+
+            return true;
+           
+        }

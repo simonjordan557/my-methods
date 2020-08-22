@@ -1,0 +1,23 @@
+ public string GetAndValidateYOrN()
+
+{
+
+	string input;
+
+            while ((input != "N") && (input != "Y"))
+            {
+                Console.WriteLine("\nIs it the weekend? Y or N");
+
+                input = Console.ReadLine().ToUpper();
+
+                if (input == "Y" || input == "N")
+                {
+                    return input;
+                }
+
+                else
+                {
+                    Console.WriteLine($"\n{input} is not a valid response.");
+                }
+            }
+}
